@@ -7,7 +7,6 @@ class Content(Mapping):
     __regex = re.compile(__delimeter, re.MULTILINE)
 
     @classmethod
-
     def load(cls, string):
         _, fm, content = cls.__regex.split(string, 2)
         metadata = load(fm, Loader=FullLoader)
@@ -19,11 +18,11 @@ class Content(Mapping):
 
     @property
     def body(self):
-        self.data["content"]
+        return self.data["content"]
 
     @property
     def type(self):
-        return self.data["type"]if "type" in self.data else None
+        return self.data["type"] if "type" in self.data else None
 
     @type.setter
     def type(self, type):
@@ -43,4 +42,4 @@ class Content(Mapping):
         for key, value in self.data.items():
             if key != "content":
                 data[key] = value
-        return str(data
+        return str(data)
