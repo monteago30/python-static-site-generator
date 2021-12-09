@@ -5,7 +5,7 @@ from typing import List
 from pathlib import Path
 
 from docutils.core import publish_parts
-from markdown import extensions, markdown
+from markdown import markdown
 from ssg.content import Content
 
 
