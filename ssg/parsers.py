@@ -1,5 +1,5 @@
 import shutil
-import sys
+import sy
 
 from typing import List
 from pathlib import Path
